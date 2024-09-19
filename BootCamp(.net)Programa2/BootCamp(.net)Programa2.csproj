@@ -46,6 +46,7 @@
     <Compile Include="Carta.cs" />
     <Compile Include="Baraja.cs" />
     <Compile Include="Batalla.cs" />
+    <Compile Include="Jugadores.cs" />
     <Compile Include="Poker.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

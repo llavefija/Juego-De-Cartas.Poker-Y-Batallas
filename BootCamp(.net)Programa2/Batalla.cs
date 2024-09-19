@@ -17,7 +17,7 @@ namespace BootCamp_.net_Programa2
         private List<Carta> cartasSeleccionadas; // Se crea una lista para almacenar la carta seleccionada por cada jugador
         private Dictionary<int, int> puntos; // Se crea un diccionario para almacenar los puntos de los jugadores
 
-
+        // Metodo constructor de Batalla
         public Batalla()
         {
             baraja = new Baraja(); // Se inicializa la clase baraja.
@@ -220,8 +220,6 @@ Gana quien tenga mas rondas ganadas acumuladas la partida acaba una vez todos se
             // Continuar hasta que solo un jugador tenga cartas
             while (mazosJugadores.Count(m => m.Count > 0) > 1);
         }
-
-
 
         // Metodo para barajar las cartas y repartir mazos o cartas unicas a los jugadores
         public Carta BarajarYRepartirCartas(bool directo)
