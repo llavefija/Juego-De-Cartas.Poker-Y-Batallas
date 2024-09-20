@@ -37,6 +37,7 @@ Introduce el juego al que quieras jugar:
 
 1.Ataque directo, batalla de cartas.
 2.Ataque con mazo, batalla de cartas.
+3.Poker Texas Hold 'Em
 0.Salir del programa.
 ");
 
@@ -59,7 +60,7 @@ Introduce el juego al que quieras jugar:
                         substitulo = true;
                         break;
                     case "3":
-                        poker.IniciarPoker(); // Opcion para iniciar una batalla 1 vs 1 con cartas al azar y directo
+                        poker.IniciarPoker(); // Opcion para iniciar el juego de poker texas hold 'em
                         substitulo = true;
                         break;
                     default:

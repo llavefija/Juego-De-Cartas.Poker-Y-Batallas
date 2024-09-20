@@ -29,23 +29,34 @@ namespace BootCamp_.net_Programa2
         private ePaloFrancesa paloFRA; // Se instancia el enum palo frances
 
         // Constructor de Carta vacio
-        public Carta()
-        {
-
-        }
 
         // Constructor de la Carta para baraja española
         public Carta(int numero, ePaloEspanola paloESP)
         {
-            this.numero = numero;
-            this.paloESP = paloESP; 
+            this.Numero = numero;
+            this.paloEspanol = paloESP;
         }
 
         // Constructor de la Carta para baraja francesa
         public Carta(int numero, ePaloFrancesa paloFRA)
         {
-            this.numero = numero;
-            this.paloFRA = paloFRA;
+            this.Numero = numero;
+            this.paloFrances = paloFRA;
+        }
+
+        // Constructor de Carta vacío, que representa una carta especial o "sin cartas"
+        public Carta()
+        {
+            // Asignar valores especiales que indiquen que la carta está vacía
+            this.numero = 0;
+            this.paloESP = ePaloEspanola.Copas; // Puede ser cualquier palo
+            this.paloFRA = ePaloFrancesa.Picas; // Puede ser cualquier palo
+        }
+
+        // Método para verificar si la carta es "sin cartas" (vacía)
+        public bool EsCartaVacia()
+        {
+            return this.numero == 0;
         }
 
 

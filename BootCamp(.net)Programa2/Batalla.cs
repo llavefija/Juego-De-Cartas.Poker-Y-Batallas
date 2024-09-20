@@ -6,6 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using BootCamp_.net_Programa2;
+using static BootCamp_.net_Programa2.Baraja;
 
 namespace BootCamp_.net_Programa2
 {
@@ -40,7 +41,7 @@ namespace BootCamp_.net_Programa2
 ·Este juego se juega con 48 cartas de la baraja española (1-9, sota, caballo y rey),
 con los respectivos palos (oros, bastos, espadas y copas).
 
-·Es un juego para dos jugadores, gana quien consiga el número más alto del 1 al 12.");
+·Es un juego de dos hasta cinco jugadores, gana quien consiga el número más alto del 1 al 12.");
 
             if (directo)
             {
@@ -174,7 +175,10 @@ Gana quien tenga mas rondas ganadas acumuladas la partida acaba una vez todos se
 
                     if (cartasJugadores.Count == 0)
                     {
+                        Carta cartaSeleccionada = cartaSeleccionada = new Carta(); // Crear una carta vacía si no hay cartas
                         Console.WriteLine($"El jugador nº{numeroDelJugador} no tiene cartas");
+                        cartasSeleccionadas.Add(cartaSeleccionada); // Añadir a cartas seleccionadas
+
                     }
                     else
                     {
@@ -233,9 +237,9 @@ Gana quien tenga mas rondas ganadas acumuladas la partida acaba una vez todos se
                 Console.ReadLine();
             }
 
-            int index = r.Next(baraja.Cartas.Count); // Seleccionar un índice aleatorio
-            Carta carta = baraja.Cartas[index]; // Obtener la carta en ese índice
-            baraja.Cartas.RemoveAt(index); // Eliminar la carta de la baraja para no seleccionar la misma
+            int index = r.Next(baraja.cartas.Count); // Seleccionar un índice aleatorio
+            Carta carta = baraja.cartas[index]; // Obtener la carta en ese índice
+            baraja.cartas.RemoveAt(index); // Eliminar la carta de la baraja para no seleccionar la misma
 
             //Menu.ImprimirConColor($"\nEl jugador nº{numeroDelJugador} elegido una carta correctamente.", ConsoleColor.Green);
 

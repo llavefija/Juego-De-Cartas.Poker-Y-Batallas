@@ -7,8 +7,8 @@ namespace BootCamp_.net_Programa2
 {
     internal class Baraja
     {
-        private List<Carta> cartas; // Instancia de cartas
-        private Random random; // Instancia de Random
+        public  List<Carta> cartas; // Instancia de cartas
+        public Random random; // Instancia de Random
 
         public Baraja()
         {
@@ -21,6 +21,7 @@ namespace BootCamp_.net_Programa2
         {
             foreach (var item in Enum.GetValues(typeof(ePaloEspanola)))
             {
+                
                 for (int num = 1; num <= 12; num++)
                 {
                     ePaloEspanola palo = (ePaloEspanola)item; // Convertir el entero a tipo Palo (enum)
@@ -35,12 +36,15 @@ namespace BootCamp_.net_Programa2
         {
             foreach (var item in Enum.GetValues(typeof(ePaloFrancesa))) // Asegúrate de que ePaloFrances esté definido
             {
-                for (int num = 1; num <= 13; num++)
-                {
-                    ePaloFrancesa palo = (ePaloFrancesa)item; // Convertir el entero a tipo Palo (enum)
-                    Carta c = new Carta(num, palo);
-                    cartas.Add(c); // Añadir la carta a la baraja
-                }
+       
+               
+                    for (int num = 1; num <= 13; num++)
+                    {
+                        ePaloFrancesa palo = (ePaloFrancesa)item; // Convertir el entero a tipo Palo (enum)
+                        Carta c = new Carta(num, palo);
+                        cartas.Add(c); // Añadir la carta a la baraja
+                    }
+                
             }
         }
 
