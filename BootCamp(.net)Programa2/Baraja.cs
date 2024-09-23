@@ -7,8 +7,8 @@ namespace BootCamp_.net_Programa2
 {
     internal class Baraja
     {
-        public  List<Carta> cartas; // Instancia de cartas
-        public Random random; // Instancia de Random
+        public List<Carta> cartas; // Instancia de cartas
+        Random random; // Instancia de Random
 
         public Baraja()
         {
@@ -21,7 +21,7 @@ namespace BootCamp_.net_Programa2
         {
             foreach (var item in Enum.GetValues(typeof(ePaloEspanola)))
             {
-                
+
                 for (int num = 1; num <= 12; num++)
                 {
                     ePaloEspanola palo = (ePaloEspanola)item; // Convertir el entero a tipo Palo (enum)
@@ -36,15 +36,15 @@ namespace BootCamp_.net_Programa2
         {
             foreach (var item in Enum.GetValues(typeof(ePaloFrancesa))) // Asegúrate de que ePaloFrances esté definido
             {
-       
-               
-                    for (int num = 1; num <= 13; num++)
-                    {
-                        ePaloFrancesa palo = (ePaloFrancesa)item; // Convertir el entero a tipo Palo (enum)
-                        Carta c = new Carta(num, palo);
-                        cartas.Add(c); // Añadir la carta a la baraja
-                    }
-                
+
+
+                for (int num = 1; num <= 13; num++)
+                {
+                    ePaloFrancesa palo = (ePaloFrancesa)item; // Convertir el entero a tipo Palo (enum)
+                    Carta c = new Carta(num, palo);
+                    cartas.Add(c); // Añadir la carta a la baraja
+                }
+
             }
         }
 
@@ -59,5 +59,26 @@ namespace BootCamp_.net_Programa2
             cartas.RemoveAt(index); // Eliminar la carta de la baraja para no seleccionar la misma
             return carta;
         }
+
+        public void MezclarBaraja()
+        {
+
+            Random random = new Random();
+            int n = cartas.Count;
+
+            for (int i = n - 1; i > 0; i--)
+            {
+                // Seleccionar un índice aleatorio entre 0 y i
+                int j = random.Next(0, i + 1);
+
+                // Intercambiar cartas en índices i y j
+                Carta temp = cartas[i];
+                cartas[i] = cartas[j];
+                cartas[j] = temp;
+            }
+
+
+        }
+
     }
 }

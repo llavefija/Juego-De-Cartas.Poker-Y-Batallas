@@ -14,9 +14,9 @@ namespace BootCamp_.net_Programa2
     {
         Baraja baraja; // Se crea la clase baraja
         List<Carta> cartasJugadores; // Se crea una lista que almacenara la carta del jugador
-        private List<List<Carta>> mazosJugadores; // Se crea una lista para almacenar los mazos de los jugadores
-        private List<Carta> cartasSeleccionadas; // Se crea una lista para almacenar la carta seleccionada por cada jugador
-        private Dictionary<int, int> puntos; // Se crea un diccionario para almacenar los puntos de los jugadores
+        List<List<Carta>> mazosJugadores; // Se crea una lista para almacenar los mazos de los jugadores
+        List<Carta> cartasSeleccionadas; // Se crea una lista para almacenar la carta seleccionada por cada jugador
+        Dictionary<int, int> puntos; // Se crea un diccionario para almacenar los puntos de los jugadores
 
         // Metodo constructor de Batalla
         public Batalla()

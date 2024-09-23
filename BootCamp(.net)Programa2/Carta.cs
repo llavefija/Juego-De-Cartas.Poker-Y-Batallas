@@ -65,5 +65,19 @@ namespace BootCamp_.net_Programa2
 
         public ePaloFrancesa paloFrances { get => paloFRA; set => paloFRA = value; }
 
+        public override string ToString()
+        {
+            if (paloFrances != null)  // Asumiendo que puede ser nulo si no es una carta francesa
+            {
+                return $"{Numero} de {paloFrances}";
+            }
+            else if (paloEspanol != null)  // Si tiene un palo español
+            {
+                return $"{Numero} de {paloEspanol}";
+            }
+            return "Carta sin palo";  // Por si no tiene ningún palo asignado
+        }
+
+
     }
 }
